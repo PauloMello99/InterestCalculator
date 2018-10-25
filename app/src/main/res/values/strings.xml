@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">InterestCalculator</string>
+    <string name="app_title">Interest Calculator</string>
+    <string name="app_subtitle">Calculando seus Juros sem estresse</string>
+    <string name="date_formatter">dd/MM/yyyy</string>
+    <string name="hint_vencimento">Dia do vencimento</string>
+    <string name="hint_valor">Valor original</string>
+    <string name="hint_pagamento">Dia do pagamento</string>
+    <string name="juros">Juros</string>
+    <string name="multa">Multa</string>
+    <string name="total_a_pagar">Total a pagar</string>
+    <string name="diferenca">Diferença</string>
+    <string name="entrada">Entrada</string>
+    <string name="saida">Saída</string>
+</resources>

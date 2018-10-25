@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4e54c8</color>
+    <color name="colorPrimaryDark">#1f4037</color>
+    <color name="colorAccent">#4e54c8</color>
+    <color name="colorSplashScreenText">#FFFDE4</color>
+    <color name="colorSplashScreenStart">#4e54c8</color>
+    <color name="colorSplashScreenEnd">#8f94fb</color>
+    <color name="radio_button_selected_color">#ff33b5e5</color>
+    <color name="radio_button_unselected_color">@android:color/transparent</color>
+    <color name="colorButtonBorder">#ffffff</color>
+    <color name="colorLabel">#FFFFFF</color>
+    <color name="fullBlack">#000000</color>
+</resources>

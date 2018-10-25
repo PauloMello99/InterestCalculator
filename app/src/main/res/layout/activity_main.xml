@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="15sp"
+    android:layout_marginTop="30sp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15sp">
+
+        <LinearLayout
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/valor"
+                android:maxLines="1"
+                android:hint="@string/hint_valor"
+                android:textColor="@color/fullBlack"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dia_vencimento"
+                android:maxLines="1"
+                android:hint="@string/hint_vencimento"
+                android:textColor="@color/fullBlack"/>
+
+            <EditText
+                android:textColor="@color/fullBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dia_pagamento"
+                android:maxLines="1"
+                android:hint="@string/hint_pagamento"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20sp">
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:maxLines="1"
+                android:id="@+id/juros"
+                android:layout_marginRight="10dp"
+                android:hint="@string/juros"
+                android:textColor="@color/fullBlack"/>
+
+            <info.hoang8f.android.segmented.SegmentedGroup
+                android:id="@+id/segmented1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="0.3">
+
+                <RadioButton
+                    android:id="@+id/button_juros_dinheiro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/button_juros_porcentagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    style="@style/RadioButton" />
+            </info.hoang8f.android.segmented.SegmentedGroup>
+
+        </LinearLayout>
+
+        <info.hoang8f.android.segmented.SegmentedGroup
+            android:id="@+id/segmented2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15sp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_weight="0.5"
+                android:id="@+id/button_juros_dia"
+                style="@style/RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dia" />
+
+            <RadioButton
+                android:layout_weight="0.5"
+                android:id="@+id/button_juros_mes"
+                style="@style/RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mês" />
+        </info.hoang8f.android.segmented.SegmentedGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                android:maxLines="1"
+                android:id="@+id/multa"
+                android:hint="@string/multa"
+                android:textColor="@color/fullBlack"/>
+
+            <info.hoang8f.android.segmented.SegmentedGroup
+                android:id="@+id/segmented3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/button_multa_dinheiro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/button_multa_porcentagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    style="@style/RadioButton" />
+            </info.hoang8f.android.segmented.SegmentedGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Limpar"
+            android:id="@+id/clear"
+            style="@style/ButtonOutlineBorder"
+            android:onClick="clearAll"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Calcular"
+            style="@style/ButtonOutlineBorder"
+            android:id="@+id/calculate"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
